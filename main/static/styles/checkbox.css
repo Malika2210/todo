@@ -28,7 +28,7 @@
     background-color: rgb(255, 255, 255);
 }
 
-.checkbox_container input: :checked - .checkmark {
+.checkbox_container input:checked ~ .checkmark {
     background-color: #2196f3
 }
 
@@ -38,11 +38,11 @@
     display: none;
 }
 
-.checkbox_container input:checked - .checkmark:after {
+.checkbox_container input:checked ~ .checkmark:after {
     display: block;
 }
 
-.container .checkmark:after {
+.checkbox_container .checkmark:after {
     left: 9px;
     top: 5px;
     width: 5px;

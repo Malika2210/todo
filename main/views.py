@@ -25,7 +25,13 @@ def add_todo(request):
     todo.save()
     return redirect(test)
 
-    def delete_todo(request, id):
-        todo = ToDo.objects.get(id=id)
-        todo.delete()
-        return redirect(test)
+def delete_todo(request, id):
+    todo = ToDo.objects.get(id=id)
+    todo.delete()
+    return redirect(test)
+
+def mark_todo(request, id):
+    todo = ToDo.objects.get(id=id)
+    todo.is_favorite = True
+    todo.save()
+    return redirect(test)
